@@ -11,10 +11,10 @@ public class App
     {
         
         Database database = new Database(
-            "jdbc:postgresql://localhost:5432/weather_db", 
-           "w", "214214");
+            "jdbc:postgresql://localhost:port/weather_db", 
+           "username", "password");
 
-        // DatabaseWrite.writeTextToDB("/home/w/Documents/coding/JAVA/db_worker/text/weather.txt", database);
+        DatabaseWrite.writeTextToDB("/home/w/Documents/coding/JAVA/db_worker/text/weather.txt", database);
 
         DatabaseGetData.printAverageColumnDouble(1950, 2001, "precipitations", database);
         DatabaseGetData.printAverageColumnDouble(1950, 2001, "snow", database);
